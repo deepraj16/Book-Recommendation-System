@@ -1,0 +1,80 @@
+{% extends 'layout.html' %}
+
+{% block content  %}
+<div class="container" >
+    <div class="row">
+        <div class="col-md-12">
+            <br>
+            <h1 class="text" style="font-size:50px">Recommend a book</h1>
+            <br>
+            <h1 style="font-size:30px">Serch book</h1>
+            <form action="/recommend_books" method="post">
+                 <input
+                    type="text"
+                    class="form-control"
+                    name="user_input"
+                    id=""
+                    aria-describedby="helpId"
+                    placeholder=""
+                />
+                <br>
+                <input type="submit" class="btn btn-lg btn-warning">
+                <br>
+            </form>
+        </div>
+
+        {% if data %}
+
+        {% for i in data %}
+        <div class="col-md-2" style="margin-top:30px;">
+            <div class="card">
+                <div class="card-body " style="background-color: antiquewhite;">
+                    <img class="card-img-top" src="{{ i[2] }}" >
+                    <p>{{ i[0] }}</p>
+                     <p>{{ i[1] }}</p>
+                </div>
+            </div>
+            
+        </div>
+        {% endfor %}
+        <!-- <div class="col-md-2" style="margin-top:30px;">
+            <div class="card">
+                <div class="card-body " style="background-color: antiquewhite;">
+                    <img class="card-img-top" src="{{ image[4] }}" >
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-md-2" style="margin-top:30px;">
+            <div class="card">
+                <div class="card-body " style="background-color: antiquewhite;">
+                    <img class="card-img-top" src="{{ image[6] }}" >
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-md-2" style="margin-top:30px;">
+            <div class="card">
+                <div class="card-body " style="background-color: antiquewhite;">
+                    <img class="card-img-top" src="{{ image[7] }}" >
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-md-2" style="margin-top:30px;">
+            <div class="card">
+                <div class="card-body " style="background-color: antiquewhite;">
+                    <img class="card-img-top" src="{{ image[8] }}" >
+                </div>
+            </div>
+            
+        </div> -->
+        {% endif %}
+
+
+               
+    </div>
+      
+</div>
+
+{% endblock %}

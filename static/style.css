@@ -1,0 +1,41 @@
+body{
+    text-align: center;
+    padding: 10%;
+    background-image: url('imageedit_2_6968045083\ \(2\).jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+    color: aliceblue;
+    
+}
+
+input{
+    text-align: center;
+    font-size: 20px;
+}
+h1{
+    padding-left: -100px;
+    font-size: 50px;
+    margin-right: 45%;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+form{
+    font-size: 160%;
+
+}
+
+.bag{
+    background-image: url('images.jpeg');
+    background: rgba(0, 0, 0, 0.459);
+    margin-left: 400px;
+    margin-right: 400px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border:0cap ; 
+    border-radius: 25px;
+    
+}
+
+.but{
+    
+}

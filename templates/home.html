@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block content  %}
+<div class="container" >
+  <div class="row">
+      <div class="col-md-12">
+          <h1 class="text" style="font-size:50px">Top 50 Books</h1>
+      </div>
+{%  for i in range(book_name|length)  %}
+
+                <div class="col-md-2" style="margin-top:30px; margin-bottom: 20px;">
+                    <div class="card">
+                        <div class="card-body " style="background-color: antiquewhite;">
+                            <img class="card-img-top" src="{{ image[i] }}" >
+                            <h4 style="color: rgb(16, 13, 13);">{{ book_name[i] }}</h4>
+                            <p>{{ author[i] }}</p>
+                            <p>{{ votes[i] }}</p>
+                            <p>{{ rating[i] }}</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                {% endfor %}
+            </div>
+</div>
+{% endblock %}

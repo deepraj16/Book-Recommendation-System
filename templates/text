@@ -1,0 +1,59 @@
+{% extends 'layout.html' %}
+
+{% block content  %}
+<div class="container" >
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text" style="font-size:50px">Recommend a book</h1>
+        </div>
+            <br>
+            <br>
+            <br>
+            <br>
+        <form>
+            <div class="mb-3">
+                <h1 style="font-size:30px">Serch book</h1>
+                <input
+                    type="text"
+                    class="form-control"
+                    name=""
+                    id=""
+                    aria-describedby="helpId"
+                    placeholder=""
+                />
+               
+            <br>
+            
+            <input type="submit" class="btn btn-lg btn-warning">
+
+        </form>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-2" style="margin-top:30px;">
+                    <div class="card">
+                        <div class="card-body " style="background-color: antiquewhite;">
+                            <img class="card-img-top" src="{{ image[5] }}" >
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-md-2" style="margin-top:30px;">
+                    <div class="card">
+                        <div class="card-body " style="background-color: antiquewhite;">
+                            <img class="card-img-top" src="{{ image[5] }}" >
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-md-2" style="margin-top:30px;">
+                    <div class="card">
+                        <div class="card-body " style="background-color: antiquewhite;">
+                            <img class="card-img-top" src="{{ image[5] }}" >
+                        </div>
+                    </div>
+                    
+                </div>
+                </div>
+                
+
+{% endblock %}

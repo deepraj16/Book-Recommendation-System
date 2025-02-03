@@ -1,0 +1,34 @@
+{%  extends 'layout.html' %}
+
+
+ 
+{% block content %}
+
+<div class="container" >
+    <div class="row">
+        
+       
+{%  for i in range(book_name|length)  %}
+
+                <div class="col-md-2" style="margin-top:30px;">
+                    <div class="card">
+                        <form action="/add1" method="POST">
+                            <button  type="submit" class="btn " style="background-color: rgb(173, 95, 11);">ADD</button>
+                        
+                        
+                        <div class="card-body " style="background-color: antiquewhite;">
+                            
+                            <img class="card-img-top" id="book_name" name="book_name" src="{{ image[i] }}" >
+                           
+                        </div>
+                    </form>
+                        <!-- <form action="{{ url_for( 'add_book' ) }}">
+                        <input type="submit" class="btn  btn-warning">
+                        </form> -->
+                    </div>
+                    
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+{% endblock %}

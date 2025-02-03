@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block content  %}
+<div class="container" >
+  <div class="row">
+      <div class="col-md-12">
+          <h1 class="text" style="font-size:70px">Wellcome to Libray</h1>
+      </div>
+{%  for i in range(book_name|length)  %}
+
+                <div class="col-md-2" style="margin-top:30px;">
+                    <div class="card">
+                        <div class="card-body " style="background-color: antiquewhite;">
+                            <img class="card-img-top" src="{{ image[i] }}" >
+                        </div>
+                        <!-- <form action="{{ url_for( 'add_book' ) }}">
+                        <input type="submit" class="btn  btn-warning">
+                        </form> -->
+                    </div>
+                    
+                </div>
+                {% endfor %}
+
+{% endblock %}

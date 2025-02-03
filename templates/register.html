@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script>
+        function valid(){
+            let p=document.getElementById('pass')
+            let cp=document.getElementById('cpass')
+        }
+    </script>
+</head>
+<body>
+    <div class="bag">
+    <h1>Register</h1>
+    <form method="POST" action="{{ url_for('register') }}">
+        {{ form.hidden_tag() }}
+        <label for="username">Username:</label>
+        {{ form.username() }}<br><br>
+
+
+
+        <label for="password">Password:</label>
+        {{ form.password }}
+
+        {% if form.password.errors %}
+        {% for error in form.password.errors%}
+               <div class="deep"><p>*{{error}}</p></div>
+      {% endfor %}
+      {% endif %}
+      <br><br>
+
+
+        <label for="confirm_password">Confirm Password:</label>
+        {{ form.confirm_password }}
+
+        {% if form.confirm_password.errors %}
+        {% for error in form.confirm_password.errors%}
+               <div class="deep"><p>*{{error}}</p></div>
+      {% endfor %}
+      {% endif %}
+
+        <br><br>   
+        <div>
+        {{ form.submit }}
+        </div>
+    
+
+
+</form>
+    <p>Already have an account? <a href="{{ url_for('login') }}">Login here</a></p>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+</div>
+</body>
+</html>
